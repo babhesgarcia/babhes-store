@@ -1,0 +1,17 @@
+.icon ,.sm-icon{
+    width: 40px;
+    height: 40px;
+    background-color: var(--l-gray);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sm-icon {
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,20 @@
+/* colors */
+@import url('./utilities/colors.css');
+
+/* fonts */
+@import url('./utilities/fonts.css');
+
+/* icons */
+@import url('./utilities/icons.css');
+
+/* cards */
+@import url('./utilities/cards.css');
+
+/* header */
+@import url('./header.css');
+
+/* index */
+@import url('./main.css');
+
+/* index */
+@import url('./index.css');

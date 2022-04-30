@@ -1,0 +1,28 @@
+.main > .home > .intro,latest-product,.customer_form{
+    min-height: 700px;
+}
+
+
+.home .title{
+    font-size: 7em;
+}
+
+
+/* .. cart products */
+
+/* image */
+.products .product-img{
+    max-width: 200px;
+    height: 200px;
+}
+
+.product-img img {
+    object-fit: cover;
+}
+
+/* form */
+.customer_form{
+    background-color: var(--l-gray);
+}
+
+

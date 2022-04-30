@@ -1,0 +1,25 @@
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    font-family: Poppins;
+}
+
+/* cart icon */
+.cart > .cart-count{
+    width: 20px;
+    height: 20px;
+    top: -5%;
+    right: 0%;
+    border-radius: 50%;
+    background-color: rgb(245, 35, 35);
+    font-size: .5em;
+    color: white;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

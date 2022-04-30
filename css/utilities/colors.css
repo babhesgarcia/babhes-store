@@ -1,0 +1,13 @@
+:root {
+    --l-gray: rgba(70, 70, 77, 0.075);
+    --blue:#09568d;
+    --d-blue:#172035;
+    --orange-yellow:#f8a300;
+}
+
+
+
+/* colors classes */
+.l-gray {
+    color: var(--l-gray);
+}
