@@ -19,7 +19,7 @@
                               <div class="card-body d-flex flex-column flex-lg-row align-items-center">
                                   <!-- img -->
                                   <div class="product-img mx-3 d-flex flex-column justify-content-between align-items-center">
-                                      <img src="./photos/2.jpg" alt="img">
+                                      <img src="./photos/uploaded/<?php echo $item['img']; ?>" alt="img">
 
                                       <!-- price -->
                                       <div class="product-price d-flex justify-content-between align-items-center alert mb-0">

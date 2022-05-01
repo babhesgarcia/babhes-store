@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
 
     <?php if (!is_null($productId)) : ?>
         <input type="hidden" name="id" value="<?php echo $productId; ?>">
@@ -22,6 +22,14 @@
         <label for="product_price" class="form-label">Price</label>
         <input type="text" name="product_price" id="product_price" class="form-control" value="<?php echo $products->get_input('product_price'); ?>">
         <small class="text-danger"><?php echo $products->get_error('product_price'); ?></small>
+    </div>
+
+
+    <!-- price -->
+    <div class="mb-3">
+        <label for="product_img" class="form-label">Upload photo</label>
+        <input type="file" name="product_img" id="product_img" class="form-control">
+        <small class="text-danger"><?php echo $products->get_error('product_img'); ?></small>
     </div>
 
     <?php if (!is_null($productId)) : ?>

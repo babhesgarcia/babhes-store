@@ -10,7 +10,7 @@
                       <?php foreach ($product_records as $product) : ?>
                           <div class="col-md-4 col-lg-3 mb-3">
                               <div class="card shadow-lg">
-                                  <img src="./photos/1.jpg" class="card-img-top img img-fluid" alt="">
+                                  <img src="./photos/uploaded/<?php echo $product['img']; ?>" class="card-img-top img img-fluid" alt="">
                                   <div class="card-body">
                                       <h4 class="card-title fw-bold"><?php echo $product['product_name']; ?></h4>
                                       <p class="card-text"><?php echo $product['product_description']; ?></p>
@@ -18,16 +18,18 @@
                                           Price: <code class="fs-5"><?php echo $product['product_price']; ?></code>
                                       </div>
                                       <?php if (in_array($product['product_id'], $_SESSION['cart'])) : ?>
-                                          <div class="alert alert-success">Added to cart</div>
+                                          <div class="alert alert-success">Added to basket</div>
                                       <?php else : ?>
                                           <div class="d-grid">
-                                              <a href="?source=products&product_id=<?php echo $product['product_id']; ?>" class="btn btn-primary">Add to card</a>
+                                              <a href="?source=products&product_id=<?php echo $product['product_id']; ?>" class="btn btn-warning">Add to basket</a>
                                           </div>
                                       <?php endif; ?>
                                   </div>
                               </div>
                           </div>
                       <?php endforeach; ?>
+                  <?php else : ?>
+                      <div class="alert alert-info">No products Yet</div>
                   <?php endif; ?>
               </div>
           </div>

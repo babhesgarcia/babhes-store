@@ -20,15 +20,15 @@ class Products  extends Database
 
     public function add_product($params)
     {
-        $query = "INSERT INTO products (product_name, product_description, product_price) VALUES (
-            :name, :description, :price
+        $query = "INSERT INTO products (product_name, product_description, product_price, img) VALUES (
+            :name, :description, :price, :product_img
         )";
         return $this->insert_row($query, $params);
     }
 
     public function update_product_info($params)
     {
-        $sql = "UPDATE products SET product_name = :product_name, product_description = :product_description, product_price = :product_price WHERE product_id = :product_id";
+        $sql = "UPDATE products SET product_name = :product_name, product_description = :product_description, product_price = :product_price, img = :product_img WHERE product_id = :product_id";
         return $this->update($sql, $params);
     }
 
@@ -65,8 +65,8 @@ class Products  extends Database
 
     public function get_cartItems($params)
     {
-        $paramLeng = count($params);
-        $placeholder = str_repeat('?,', $paramLeng - 1) . '?';
+        $paramLeng = count($params) - 1;
+        $placeholder = str_repeat('?,', $paramLeng) . '?';
         $statement =  $this->pdo->prepare("SELECT * FROM products WHERE product_id IN ($placeholder)");
         $statement->execute($params);
 

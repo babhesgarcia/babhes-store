@@ -1,5 +1,5 @@
-  <header class="header d-flex justify-content-between align-items-center shadow-sm p-2 px-4 border-bottom bg-dark">
-      <div class="nav-logo fs-3 fw-bold text-white">Garcia store</div>
+  <header class="header d-flex justify-content-between align-items-center p-2 px-4 border-bottom border-primary bg-light">
+      <div class="nav-logo fs-3 fw-bold text-primary">Garcia store</div>
 
       <nav class="nav">
           <a href="?source=home" class="nav-link">Home</a>

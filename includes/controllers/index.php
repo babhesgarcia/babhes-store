@@ -1,4 +1,10 @@
   <?php
+
+  if (!isset($_SESSION['cart']) && empty($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+  }
+
+
   $products = new Products();
 
 
@@ -18,9 +24,12 @@
   // .. get cart count
   $cartItemCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
+  $cartItems = [];
 
   //  .. cart items
-  $cartItems = $products->get_cartItems($_SESSION['cart']);
+  if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+    $cartItems = $products->get_cartItems($_SESSION['cart']);
+  }
 
 
   //  ..cart total price

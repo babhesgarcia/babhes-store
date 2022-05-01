@@ -68,6 +68,8 @@ trait Input_handlers
         if (move_uploaded_file($tmp_name, $dir . "/$hash_name")) {
             return $hash_name;
         }
+
+        return false;
     }
 
 
